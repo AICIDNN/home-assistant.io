@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Home-assistant.io by AICIDNN</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-dark.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/AICIDNN/home-assistant.io">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/AICIDNN/home-assistant.io/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/AICIDNN/home-assistant.io/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>Home-assistant.io</h1>
+          <p>Jekyll project to generate home-assistant.io</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/AICIDNN">AICIDNN</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h1>
+<a id="home-assistant-website" class="anchor" href="#home-assistant-website" aria-hidden="true"><span class="octicon octicon-link"></span></a>Home Assistant website</h1>
+
+<p>This is the source for the <a href="https://github.com/balloob/home-assistant">Home Assistant</a> website available at <a href="https://home-assistant.io">Home-Assistant.io</a>.</p>
+
+<h2>
+<a id="jekyll-project-to-generate-and-deploy" class="anchor" href="#jekyll-project-to-generate-and-deploy" aria-hidden="true"><span class="octicon octicon-link"></span></a>Jekyll project to generate and deploy</h2>
+
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>rake preview</code></td>
+<td>Preview site on <a href="http://127.0.0.1:4000">http://127.0.0.1:4000</a>
+</td>
+</tr>
+<tr>
+<td><code>rake generate</code></td>
+<td>Generate new version of the site</td>
+</tr>
+<tr>
+<td><code>rake deploy</code></td>
+<td>Deploy a new version of the site</td>
+</tr>
+</tbody>
+</table>
+
+<h2>
+<a id="setup-local-environment" class="anchor" href="#setup-local-environment" aria-hidden="true"><span class="octicon octicon-link"></span></a>Setup local environment</h2>
+
+<p><em>You need to have Ruby installed.</em></p>
+
+<div class="highlight highlight-source-shell"><pre>git clone --recursive https://github.com/balloob/home-assistant.io.git
+<span class="pl-c1">cd</span> home-assistant.io
+bundle
+rake preview</pre></div>
+
+<h3>
+<a id="preparation-on-centos" class="anchor" href="#preparation-on-centos" aria-hidden="true"><span class="octicon octicon-link"></span></a>Preparation on CentOS</h3>
+
+<p>On CentOS (here 7.1.1503) Ruby is not available by default. Please take the notes here as a little guide for the Ruby installation process. </p>
+
+<div class="highlight highlight-source-shell"><pre>curl -sSL https://rvm.io/mpapis.asc <span class="pl-k">|</span> gpg2 --import -
+curl -L get.rvm.io <span class="pl-k">|</span> bash -s stable
+<span class="pl-c1">source</span> <span class="pl-k">~</span>/.profile
+rvm requirements
+rvm install ruby-2.2.2
+rvm use ruby-2.2.2 --default
+ruby -v</pre></div>
+
+<p>The last command will give you something like this <code>ruby 2.2.2p95 (2015-04-13 revision 50295) [x86_64-linux]</code>. Then install <code>bundler</code>.</p>
+
+<div class="highlight highlight-source-shell"><pre>gem install bundler</pre></div>
+
+<p>Now please follow the instruction above.</p>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
